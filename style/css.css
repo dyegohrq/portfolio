@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --background: rgba(5,5,5,1);
+    --light-color: #fff;
+    --primary-color: rgba(155,157,248,1);
+    --secondary-color: rgba(16,2,29,1);
+    --text-paragrafo: rgba(217,217,217,1);
+    --text-button: rgba(238,238,238,1);
+
+    --margin-top: 30px;
+
+    --padding-mobile: 25px;
+
+    --header-h1: 38px;
+    --header-h2: 34px;
+    --h4: 24px;
+    --h6: 16px;
+    --paragrafo: 19px;
+
+    --font-family: "Roboto", sans-serif;
+
+    --descktop-breakpoint: 1280px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header .header-container,
+#main .main-container,
+#footer .footer-container {
+    max-width: var(--descktop-breakpoint);
+    margin: auto;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    background-color: var(--background);
+}
+
+#header {
+    height: 80px;
+    padding: 0 var(--padding-mobile);
+    display: flex;
+}
+
+#header .header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header .header-container .nav {
+    position: absolute;
+    top: 80px;
+    display: none;
+}
+
+.header .header-container .burger {
+    width: 30px;
+    height: 30px;
+}
+
+.header .header-container .burger .hamburger {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.header .header-container .burger .hamburger .bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+.main .main-container {
+    margin-top: var(--margin-top);
+    padding: 0 var(--padding-mobile);
+}
+
+.main .main-container .img-man {
+    background: linear-gradient(to bottom, #0000 3%, #2b0548 100%), url(../img/fotos-principais/Rectangle\ 7.png) no-repeat center / contain;
+    width: 344px;
+    height: 352px;
+}
