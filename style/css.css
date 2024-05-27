@@ -4,13 +4,14 @@
     --background: rgba(5,5,5,1);
     --light-color: #fff;
     --primary-color: rgba(155,157,248,1);
+    --primaria-1: rgba(73,24,110,1); 
     --secondary-color: rgba(16,2,29,1);
     --text-paragrafo: rgba(217,217,217,1);
     --text-button: rgba(238,238,238,1);
 
     --margin-top: 60px;
 
-    --gap: 20px;
+    --gap: 30px;
 
     --padding-mobile: 25px;
 
@@ -31,11 +32,33 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 #header .header-container,
 #main .main-container,
 #footer .footer-container {
     max-width: var(--descktop-breakpoint);
     margin: auto;
+}
+
+.btn {
+    width: 150px;
+    height: 50px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #fff;
+    transition: all ease-in-out .5s;
+}
+
+.btn:hover {
+    background-color: var(--primaria-1);
+    border: transparent;
 }
 
 body {
@@ -100,8 +123,56 @@ body {
     gap: var(--gap);
 }
 
-.main .main-container .img-man {
-    background: url(../img/fotos-principais/Rectangle\ 7.png) no-repeat center / cover, linear-gradient(to bottom, #0000002d 3%, #2b054833 100%);
+.main .main-container .sobre .img-man {
+    background: url(../img/fotos-principais/Rectangle\ 7.png) no-repeat center / contain, linear-gradient(to bottom, #0000002d 3%, #2b054833 100%);
     width: 100%;
     height: 452px;
+}
+
+.main .main-container .sobre .text-sobre{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.main .main-container .sobre .text-sobre h1 {
+    font-size: var(--header-h1);
+    color: var(--primary-color);
+}
+
+.main .main-container .sobre .text-sobre p {
+    color: var(--light-color);
+}
+
+.main .main-container .soft-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: var(--margin-top);
+    gap: var(--gap);
+}
+
+.main .main-container .soft-skills h2 {
+    color: var(--primary-color);
+    font-size: var(--header-h2);
+}
+
+.main .main-container .soft-skills .grid-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap) 85px;
+    margin: auto;
+}
+
+.main .main-container .soft-skills .grid-list .grid-item::marker {
+    color: var(--primary-color);
+}
+
+.main .main-container .soft-skills .grid-list .grid-item {
+    color: var(--light-color);
+}
+
+.main .main-container .tecnologies {
+
 }
