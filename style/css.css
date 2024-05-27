@@ -256,7 +256,7 @@ body {
 .main .main-container .projetos .clipboard .img-pjt {
     background: url(../img/fotos-port/cleabord.webp) no-repeat center / cover;
     width: 100%;
-    max-height: 315px;
+    height: 212px;
     border-radius: 8px;
 }
 
@@ -292,4 +292,9 @@ body {
 .main .main-container .projetos .pjt .descricao .tecnologias i {
     font-size: 1.3em;
     color: var(--light-color);
+    transition: all ease-in-out .5s;
+}
+
+.main .main-container .projetos .pjt .descricao .tecnologias i:hover {
+    color: var(--primaria-1);
 }
