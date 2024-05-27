@@ -173,6 +173,39 @@ body {
     color: var(--light-color);
 }
 
-.main .main-container .tecnologies {
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
 
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.main .main-container .tecnologies {
+    margin-top: var(--margin-top);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.main .main-container .tecnologies .tecnologies-slides{
+    display: inline-block;
+    animation: 9s slide infinite linear;
+}
+
+.main .main-container .tecnologies .tecnologies-slides .slide {
+    display: inline-block;
+    margin: 0 60px;
+}
+
+.main .main-container .tecnologies .tecnologies-slides .slide i {
+    font-size: 5em;
+    color: var(--primary-color);
+}
+
+.main .main-container .tecnologies .tecnologies-slides .slide p {
+    color: var(--light-color);
+    margin-top: 15px;
+    text-align: center;
 }
