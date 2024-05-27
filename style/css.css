@@ -143,6 +143,7 @@ body {
 
 .main .main-container .sobre .text-sobre p {
     color: var(--light-color);
+    line-height: 24px;
 }
 
 .main .main-container .soft-skills {
