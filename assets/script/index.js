@@ -3,7 +3,8 @@ const circle = document.getElementById('circle')
 const circleSmall = document.getElementById('circle-small')
 const btnContato = document.getElementById('btn-contato')
 
-const linkIs02 = document.getElementsByClassName('link-is-02')
+const burger = document.getElementById('burger')
+const navContainer = document.getElementById('nav-container')
 
 disponivel.addEventListener('mouseover', () => {
     disponivel.style.backgroundColor = '#32177d'
@@ -19,6 +20,6 @@ disponivel.addEventListener('mouseleave', () => {
     btnContato.style.background = '#32177d';
 })
 
-linkIs02.addEventListener('click', () => {
-    alert('ok')
+burger.addEventListener('click', () => {
+    navContainer.classList.toggle('active');
 })

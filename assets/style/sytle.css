@@ -77,6 +77,7 @@ body{
         height: 30px;
         background: transparent;
         border: none;
+        cursor: pointer;
     }
 
     .burger .hamburguer {
@@ -103,7 +104,7 @@ body{
     .navbar .nav-container {
         background-color: var(--cor-darck);
         width: 100%;
-        height: calc(100vh - 80px);
+        height: 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -112,6 +113,15 @@ body{
         right: 0;
         padding: var(--padding-mobile) 10px;
         border-top: 1px solid var(--cor-light);
+        overflow: hidden;
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    .navbar .active {
+        height: calc(100vh - 80px);
+        overflow: auto;
+        opacity: 1;
     }
 
     .navbar .nav-container ul {
@@ -127,30 +137,10 @@ body{
         transition: border .5s ease-in-out;
     }
 
-    .link.is-02{
-        opacity: 1;
-        transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-        transform-style: preserve-3d;    
-    }
-
-    .link.is-02.is-hiden{
-        opacity: 0; 
-        transform: translate3d(0px, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
-        transform-style: preserve-3d;   
-    }
-
-    .link-text.is-02.is-hidden {
-        position: absolute;
-        top: auto;
-        bottom: -1.2rem;
-        left: 0;
-        right: 0;
-    }
-
-    /* .navbar .nav-container li a:hover {
+    .navbar .nav-container li a:hover {
         border: 1px solid var(--cor-primaria);
         border-radius: 45px;
-    } */
+    }
 
     .disponivel {
         width: 100%;   
