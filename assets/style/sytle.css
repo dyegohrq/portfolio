@@ -49,15 +49,39 @@ body{
     color: var(--cor-light);
 }
 
+.btn {
+    background-color: transparent;
+    width: 142px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid var(--cor-primaria);
+    color: var(--cor-light);
+    font-size: var(--p-mobile);
+    letter-spacing: 1px;
+    gap: 15px;
+    transition: all .5s ease-in-out;
+}
+
+.btn:hover {
+    background-color: var(--cor-primaria);
+}
+
 #header {
     width: 100%;
     height: 90px;
 }
 
-.header-container {
+.header-container,
+.main-container {
     max-width: var(--descktop-breakpoint);
-    height: 100%;
     margin: var(--margin-breakpoint);
+}
+
+.header-container {
+    height: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -149,7 +173,7 @@ body{
         transition: all .5s ease-in-out;
     }
 
-    .disponivel .btn {
+    .disponivel .btn-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -157,7 +181,7 @@ body{
         gap: 30px;
     }
 
-    .disponivel .btn .circle {
+    .disponivel .btn-header .circle {
         width: 25px;
         height: 20px;
         background-color: transparent;
@@ -166,7 +190,7 @@ body{
         border: 2px solid var(--cor-primaria);
     }
 
-    .disponivel .btn .circle .circle-small {
+    .disponivel .btn-header .circle .circle-small {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -194,5 +218,108 @@ body{
     }
 }
 
+.main-container {
+    padding: var(--padding-mobile);
+}
+
+.main-header {
+    .img-purple {
+        background: url(../img/fotos-principais/Purple\ White\ Modern\ Technology\ Company\ Poster.png) no-repeat center / cover;
+        width: 300px;
+        height: 200px;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+
+    .text h1 {
+        color: var(--cor-light);
+        font-size: var(--h1-mobile);
+        font-weight: var(--h1-bold-mobile);
+        text-align: center;
+    }
+
+    .text p {
+        text-align: center;
+        line-height: 20px;
+        font-size: var(--small-mobile);
+    }
+
+    .button {
+        margin-top: var(--gap);
+        display: flex;
+        gap: var(--gap);
+    }
+
+    .button .btn i {
+        font-size: 22px;
+    }
+}
+
+.name {
+    color: #32177d;
+}
+
+.skills {
+    padding: 60px var(--padding-mobile);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap);
+
+    h2 {
+        font-size: var(--h2-mobile);
+        letter-spacing: 2px;
+    }
+
+    .cards{
+        overflow: hidden;
+        white-space: nowrap;
+        display: flex;
+    }
+
+    .cards .card-slide {
+        display: flex;
+        animation: 20s slide infinite linear;
+    }
+
+    .cards:hover .card-slide {
+        animation-play-state: paused;
+    }
+
+    .cards .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid var(--cor-primaria);
+        width: 150px;
+        height: 208px;
+        padding: 35px 0;
+        margin: 0 40px;
+        border-radius: 8px;
+    }
+
+    .cards .card i {
+        font-size: 5em;
+    }
+
+    .cards .card small {
+        font-size: var(--p-mobile);
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+}
 
 
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
