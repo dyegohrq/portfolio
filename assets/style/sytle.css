@@ -47,12 +47,16 @@ h2 {
     letter-spacing: 2px;
 }
 
+body,
+html {
+    overflow-x: hidden;
+}
+
 body{
     font-family: var(--font-roboto);
     background-color: var(--cor-darck);
     font-size: 16px;
     color: var(--cor-light);
-    overflow-x: hidden;
 }
 
 .btn {
@@ -339,4 +343,11 @@ body{
     to {
         transform: translateX(-100%);
     }
+}
+
+#projetos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    align-items: center;
 }
