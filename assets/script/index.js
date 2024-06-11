@@ -1,3 +1,4 @@
+const header = document.getElementById('header')
 const disponivel = document.getElementById('disponivel');
 const circle = document.getElementById('circle')
 const circleSmall = document.getElementById('circle-small')
@@ -21,8 +22,9 @@ disponivel.addEventListener('mouseleave', () => {
     btnContato.style.background = '#32177d';
 })
 
-navContainer.addEventListener('click', activeMenu)
+navContainer.addEventListener('click', activeMenu);
 
 function activeMenu() {
     navContainer.classList.toggle('active');
+    header.style.zIndex = '1'
 }
