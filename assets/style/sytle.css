@@ -72,6 +72,9 @@ body{
 #header {
     width: 100%;
     height: 90px;
+    position: fixed;
+    z-index: 1;
+    background: var(--cor-darck);
 }
 
 .header-container,
@@ -118,11 +121,12 @@ body{
     }
 
     .navbar {
-        position: absolute;
+        position: fixed;
         top: 90px;
         left: 0;
         width: 100%;
         height: 100vh;
+        z-index: 1;
     }
 
     .navbar .nav-container {
@@ -223,6 +227,8 @@ body{
 }
 
 .main-header {
+    margin-top: 60px;
+    
     .img-purple {
         background: url(../img/fotos-principais/Purple\ White\ Modern\ Technology\ Company\ Poster.png) no-repeat center / cover;
         width: 300px;
