@@ -5,6 +5,7 @@ const btnContato = document.getElementById('btn-contato')
 
 const burger = document.getElementById('burger')
 const navContainer = document.getElementById('nav-container')
+const navlink = document.getElementsByClassName('navlink')
 
 disponivel.addEventListener('mouseover', () => {
     disponivel.style.backgroundColor = '#32177d'
@@ -20,6 +21,8 @@ disponivel.addEventListener('mouseleave', () => {
     btnContato.style.background = '#32177d';
 })
 
-burger.addEventListener('click', () => {
+navContainer.addEventListener('click', activeMenu)
+
+function activeMenu() {
     navContainer.classList.toggle('active');
-})
+}

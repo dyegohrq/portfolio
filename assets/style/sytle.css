@@ -42,6 +42,11 @@ li {
     list-style-type: none;
 }
 
+h2 {
+    font-size: var(--h2-mobile);
+    letter-spacing: 2px;
+}
+
 body{
     font-family: var(--font-roboto);
     background-color: var(--cor-darck);
@@ -228,7 +233,7 @@ body{
 
 .main-header {
     margin-top: 60px;
-    
+
     .img-purple {
         background: url(../img/fotos-principais/Purple\ White\ Modern\ Technology\ Company\ Poster.png) no-repeat center / cover;
         width: 300px;
@@ -275,11 +280,6 @@ body{
     flex-direction: column;
     align-items: center;
     gap: var(--gap);
-
-    h2 {
-        font-size: var(--h2-mobile);
-        letter-spacing: 2px;
-    }
 
     .cards{
         overflow: hidden;
