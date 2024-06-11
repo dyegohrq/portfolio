@@ -151,7 +151,7 @@ body{
     }
 
     .navbar .active {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 90px);
         overflow: auto;
         opacity: 1;
     }
@@ -352,6 +352,8 @@ body{
     align-items: center;
 
     .card-project {
+        max-width: 350px;
+        margin: auto;
         border: 1px solid var(--cor-primaria);
         border-radius: 8px;
         display: flex;
@@ -390,5 +392,24 @@ body{
         font-size: 1.7em;
         margin-right: 15px;
         color: var(--cor-primaria);
+    }
+
+    .link-v {
+        margin: 65px 0;
+    }
+
+}
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--gap);
+
+    .img-sobre {
+        background: url(../img/fotos-principais/foto-1.png) no-repeat center / cover;
+        width: 100%;
+        height: 337px;
     }
 }
