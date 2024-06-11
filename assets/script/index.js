@@ -6,7 +6,7 @@ const btnContato = document.getElementById('btn-contato')
 
 const burger = document.getElementById('burger')
 const navContainer = document.getElementById('nav-container')
-const navlink = document.getElementsByClassName('navlink')
+const headerContainer = document.getElementById('header-container')
 
 disponivel.addEventListener('mouseover', () => {
     disponivel.style.backgroundColor = '#32177d'
@@ -26,5 +26,5 @@ navContainer.addEventListener('click', activeMenu);
 
 function activeMenu() {
     navContainer.classList.toggle('active');
-    header.style.zIndex = '1'
+    header.classList.toggle('active-header')
 }
